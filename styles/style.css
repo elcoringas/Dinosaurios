@@ -1,0 +1,400 @@
+/* estilo de la página sobre dinosaurios */
+/***** estilo general ******/
+@font-face {
+    font-family: dino;
+    src: url(../fonts/Jurassic_Park.ttf);
+}
+@font-face {
+    font-family: normal;
+    src: url(../fonts/normal.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+body{
+    background-color: rgb(3, 39, 3);
+    margin: 10px;
+    padding: 0;
+}
+
+body h1 {
+    letter-spacing: 0.1em ;
+}
+
+
+#container {
+    width: 90%;
+    margin: auto;
+    font-family: normal
+}
+
+#sonido {
+    color: orange;
+}
+
+/***** estilo del nav ****/
+
+.topnav {
+    overflow: hidden;
+    background-color: rgb(80, 67, 55);
+    letter-spacing: 0.1em ;
+    font-size: 5em;
+    
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: rgb(134, 104, 64);
+    color: black;
+}
+
+.topnav a.active {
+    background-color: rgb(212, 84, 25);
+    color: white;
+}
+
+.topnav .icon {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+    float: right;
+    display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    }
+    .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    }
+}
+
+
+nav {
+    padding: 20px 0 ;
+    font-family: dino;
+    /* PARA QUE LA BARRA SE QUEDE FIJA
+    position: sticky; /*** para que de quede arriba pegada 
+    top: 0;
+    z-index: 99;
+    opacity: 0.95;***/
+}
+#container nav{
+    width: 95%;
+    font-size: 1.5em;
+    color: rgb(212, 84, 25);
+    margin: auto;
+}
+
+/*** estilo hero section ***/
+
+#hero{
+    background-image: url("../images/dinofondo.jpg");
+    background-size: cover; /* estira o encoje la imagen para quer ocupe todo el bloque */
+    height: 95vh; /* 100vh sería el alto del dispositivo, móvil, tablet o pc, se adapta */
+    background-position:center ; /*para que recorte por los 2 lados */
+    position: relative; /* para poder posicionar los rótulos */
+}
+
+#hero h1{
+    position: absolute;
+    color: black;
+    left: 20px;
+    font-family: dino;
+    font-size: 5.5em;
+    text-shadow: 3px 3px 2px rgb(212, 84, 25);
+}
+
+#calltoaction{
+    position: absolute;
+    bottom: 5px; /* como es mucha distancia, en función del vh total, lo pongo también con vh */
+    left: 40px;
+    padding: 5px; /* para que parezca un botón */
+    background-color: rgb(212, 84, 25);
+    border-radius: 15px;
+    font-family: dino;
+    font-size: 2em;
+    letter-spacing: 0.03em;
+
+}
+
+#calltoaction:hover{
+    background-color: rgb(63, 49, 36);
+    cursor: pointer;
+}
+
+
+
+.fa-arrow-circle-up {
+position: fixed;
+bottom: 20px;
+right: 40px;
+color: rgb(228, 81, 13);
+font-size: 7em;
+transition: transform 0.8s;
+}
+.fa-arrow-circle-up:hover {
+transform: scale(2) rotate(360deg);
+}
+/***** empieza el estilo para la introducción *****/
+
+#introduction{
+    color: white;
+    padding: 5%;
+    text-align: justify;
+    font-size: 1.5em;
+    border-bottom: 2px solid rgb(212, 84, 25);
+}
+#introduction h1 {
+    font-family: dino;
+    font-size: 3em;
+    text-align: center;
+    text-shadow: 5px 8px 4px rgb(212, 84, 25);
+}
+#isladino {
+    width: 35%; /* como es grande, ocupa solo el 35% del espacio disponible */
+    float:left; /* para que la imagen quede rodeada por texto */
+    margin: 30px;
+}
+#introduction p:first-letter {
+    font-size: 2em;
+    color: rgb(212, 84, 25);
+}
+#introduction p {
+    font-size: 1.4em;
+    font-family:  (tengo que descargar una normal);
+}
+
+#jurassic {
+    text-decoration: none;
+    color: rgb(212, 84, 25);
+}
+
+/****** estilo de la sección a 2 columnas: history ********/
+
+#history {
+    font-family: (tengo que descargar una normal);
+    color: white;
+    border-bottom: 2px solid rgb(212, 84, 25);
+}
+#history h1 {
+    font-family: dino;
+    font-size: 3em;
+    text-align: center;
+    text-shadow:5px 8px 4px rgb(212, 84, 25);
+}
+
+#history p:first-letter {
+    font-size: 2em;
+    color: rgb(212, 84, 25);
+}
+.mitad {
+    box-sizing: border-box; /****** para que el padding y el borde cuente dentro del width *********/
+    width: 50%;
+    float: left;
+    padding: 2%;
+    font-size: 1.3em;
+}
+#izq {
+    padding: 30px 2%;
+}
+#izq h1 {
+    font-size: 5em;
+}
+#izq p {
+    font-size: 1.5em;
+}
+#drch {
+}
+#historia {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+}
+
+/***estilo de gallery ******/
+
+#gallery h1{
+    font-family: dino;
+    text-align: center;
+    font-size: 5em;
+    color: white;   
+    text-shadow:5px 8px 4px rgb(212, 84, 25);
+    padding: 20px 0;
+    letter-spacing: 0.1em;
+}
+
+#gallery h2 {
+    letter-spacing: 0.1em;
+}
+
+.cuarto{
+    width: 23%;
+    margin: 1%;
+    padding: 2%;
+    float: left;
+    box-sizing: border-box; /** en el width entran padding y border **/
+    border: 1px solid rgb(212, 84, 25) ;
+}
+
+.cuarto img{
+    width:100% ;
+    opacity:0.45;
+}
+
+.cuarto img:hover{
+    cursor: pointer;
+    opacity: 1; 
+    
+}
+
+.cuarto h2{
+    font-family: dino;
+    font-size: 3em;
+    color: white;
+    text-shadow:5px 8px 4px rgb(212, 84, 25);
+    text-align: center;
+}
+
+/*****estilo de periods*****/
+
+#periods {
+padding: 20px 10%;
+border-bottom: 2px solid rgb(212, 84, 25);
+}
+
+.accordion {
+    background-color: rgb(212, 84, 25);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: center;
+    border: none;
+    outline: none;
+    transition: 0.9s;
+    font-size: 3.5em;
+    font-family: dino;
+    word-spacing: 0.1em;
+}
+
+#periods img {
+    position: relative;
+    top: 25%;
+    left: 25%;
+    border-radius: 4px solid orange;
+}
+
+
+  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: rgb(158, 66, 24);
+}
+
+  /* Style the accordion panel. Note: hidden by default */
+.panel {
+    padding: 0 18px;
+    background-color: rgb(3, 39, 3);
+    display: none;
+    overflow: hidden;
+    font-size: 1.5em;
+}
+
+#periods h1 {
+font-family: dino;
+text-align: center;
+font-size: 5em;
+text-shadow:5px 8px 4px rgb(212, 84, 25);
+}
+
+
+
+h1, p {
+    color: white;
+}
+
+/************** estilo del footer ********************/
+
+footer h1{
+font-size: 3em;
+color: white;
+text-align: center;
+font-family: dino;
+text-shadow:5px 8px 4px rgb(212, 84, 25);
+margin-bottom: 50px;
+}
+
+footer h2 {
+    text-decoration: none;
+    color: rgb(212, 84, 25);
+    font-family: normal;
+    letter-spacing: 0.1em;
+}
+
+
+#redes {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.fotos{
+    padding: 2%;
+    box-sizing: border-box;
+}
+
+#logoig{
+    width: 20%;
+}
+#logotwit{
+    width: 20%;
+}
+#logomail{
+    width: 20%;
+}
+
+
+
+
+
+
+.resetear {clear: left;}
+
+/****** media queries ******/
+@media only screen and (max-width:750px){
+    #isladino, .mitad {width:100%;}
+    #history {width: 90%;}
+    #gallery h2 {font-size: 1.5em;}
+    .cuarto {width: 46%;
+            margin: 2%;}
+    #redes {display: flex;
+            flex-direction: column;
+        padding: 0 20px;}
+
+}
+
+@media screen and (max-width:600px){
+    .cuarto {width: 90%;
+            margin: 5%;}
+}
